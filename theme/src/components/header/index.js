@@ -147,24 +147,29 @@ export default class Header extends React.Component {
 								<Logo src={settings.logo} onClick={this.closeAll} alt="logo" />
 							</div>
 							<div className="column is-4 has-text-right header-block-right">
-								<span
+								{/*
+									<span
 									className="icon icon-search is-hidden-tablet"
 									onClick={this.searchToggle}
-								>
-									<img
-										src="/assets/images/search.svg"
-										alt={text.search}
-										title={text.search}
-										style={{ minWidth: 24 }}
-									/>
-								</span>
-								<SearchBox
+									>
+										<img
+											src="/assets/images/search.svg"
+											alt={text.search}
+											title={text.search}
+											style={{ minWidth: 24 }}
+										/>
+									</span>
+								*/}
+								{/*
+									<SearchBox
 									value={productFilter.search}
 									onSearch={this.handleSearch}
 									className={
 										this.state.mobileSearchIsActive ? 'search-active' : ''
 									}
-								/>
+									/>
+								*/}
+								
 
 								<CartIndicator
 									cart={cart}
