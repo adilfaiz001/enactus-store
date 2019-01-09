@@ -7,6 +7,10 @@ const getRedirect = req => {
 	const relativeUrl = req.url;
 	const relativePath = req.path;
 
+	console.log(absoluteUrl);
+	console.log(relativePath);
+	console.log(relativeUrl);
+	
 	return api.redirects.list().then(({ status, json }) => {
 		const items = json;
 		if (items && items.length > 0) {
@@ -39,6 +43,7 @@ const redirectUrlIsValid = url => {
 };
 
 const redirects = (req, res, next) => {
+
 	if (IGNORE_PATH.includes(req.url)) {
 		next();
 	} else {
