@@ -131,7 +131,6 @@ export default class CustomProducts extends React.Component {
 
 		const { products } = this.state;
 		
-		console.log(defaultProps);
 
 		return (
 			<ProductList
