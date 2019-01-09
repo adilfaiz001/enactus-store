@@ -20,6 +20,7 @@ const CATEGORIES_FIELDS =
 	'image,name,description,meta_description,meta_title,sort,parent_id,position,slug,id';
 
 const getCurrentPage = path => {
+	console.log(path);
 	return api.sitemap
 		.retrieve({ path: path, enabled: true })
 		.then(sitemapResponse => {
