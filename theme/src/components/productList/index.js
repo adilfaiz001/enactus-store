@@ -19,6 +19,7 @@ const ProductList = ({
 	columnCountOnWidescreen,
 	columnCountOnFullhd
 }) => {
+	console.log(products);
 	const items = products
 		? products.map(product => (
 				<Item
