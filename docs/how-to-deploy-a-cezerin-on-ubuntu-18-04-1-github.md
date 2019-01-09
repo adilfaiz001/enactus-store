@@ -135,3 +135,27 @@ Next steps:
 2. Setup HTTPS with [CloudFlare](https://www.cloudflare.com/) or [Let's Encrypt](https://letsencrypt.org/)
 3. Secure a MongoDB
 4. Configure a Firewall
+
+## 5. Mongo Settings for email
+
+db.settings.insert({
+  domain: 'http://store.enactusjmi.org',
+  logo_file: null,
+  language: 'en',
+  currency_code: 'INR',
+  currency_symbol: 'Rs.',
+  currency_format: 'Rs. {amount}',
+  thousand_separator: ',',
+  decimal_separator: '.',
+  decimal_number: 2,
+  timezone: 'Asia/Kolkata',
+  date_format: 'MMMM D, YYYY',
+  time_format: 'h:mm a',
+  default_shipping_country: 'IN',
+  default_shipping_state: '',
+  default_shipping_city: '',
+  default_product_sorting: 'stock_status,price,position',
+  weight_unit: 'kg',
+  length_unit: 'cm',
+  hide_billing_address: false
+});
