@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class EnactussLightbox extends Component {
+class EnactusLightbox extends Component {
     constructor(){
         super();
         this.state = {
