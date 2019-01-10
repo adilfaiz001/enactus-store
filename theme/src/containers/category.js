@@ -8,8 +8,6 @@ import Sort from '../components/sort';
 import CategoryBreadcrumbs from '../components/categoryBreadcrumbs';
 import * as helper from '../lib/helper';
 
-import { AwesomeButton,AwesomeButtonProgress} from 'react-awesome-button';
-import 'react-awesome-button/dist/styles.css';
 
 const getFilterAttributesSummary = productFilter => {
 	let attributesSummary = '';
