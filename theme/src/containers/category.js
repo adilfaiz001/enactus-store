@@ -129,23 +129,21 @@ const CategoryContainer = props => {
 							</div>
 						)}
 						
-						{
-							(pageTitle === 'Clothing') ?
-								(
-									<div className='design-tshirt'>
-										<div className='tshirt-form' style={tshirtStyle}>
-											<h1>Enactus T-Shirt</h1>
-											<form onSubmit={(e) => handleSubmit(e)}>
-												<label htmlFor='name'>Name</label>
-												<input type='text' id='name' placeholder='Name' />
-												<label htmlFor='department'>Department</label>
-												<input type='text' id='department' placeholder='Department'/>
-												<label htmlFor='size'>Size</label>
-												<input type='text' id='size' placeholder='S,M,L,XL,XXL'/>
-												<button>Conform Order</button>
-											</form>
-										</div>
-									</div>
+						{(pageTitle === 'Clothing') ?  (
+							<div className='column design-tshirt'>
+								<div className='tshirt-form' style={tshirtStyle}>
+									<h1>Enactus T-Shirt</h1>
+									<form onSubmit={(e) => handleSubmit(e)}>
+										<label htmlFor='name'>Name</label>
+										<input type='text' id='name' placeholder='Name' />
+										<label htmlFor='department'>Department</label>
+										<input type='text' id='department' placeholder='Department'/>
+										<label htmlFor='size'>Size</label>
+										<input type='text' id='size' placeholder='S,M,L,XL,XXL'/>
+										<button>Conform Order</button>
+									</form>
+								</div>
+							</div>
 								):
 								null
 						}
