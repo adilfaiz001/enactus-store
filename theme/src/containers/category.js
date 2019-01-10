@@ -8,6 +8,9 @@ import Sort from '../components/sort';
 import CategoryBreadcrumbs from '../components/categoryBreadcrumbs';
 import * as helper from '../lib/helper';
 
+import { AwesomeButton,AwesomeButtonProgress} from 'react-awesome-button';
+import 'react-awesome-button/dist/styles.css';
+
 const getFilterAttributesSummary = productFilter => {
 	let attributesSummary = '';
 	if (productFilter.attributes) {
@@ -90,6 +93,7 @@ const CategoryContainer = props => {
 
 	const showFilter = themeSettings.show_product_filter;
 
+	console.log(pageTitle);
 	return (
 		<Fragment>
 			<MetaTags
@@ -113,11 +117,10 @@ const CategoryContainer = props => {
 								<ProductFilter {...props} />
 							</div>
 						)}
-						
 						<div className='button'>
-							<button>Enatus T-Shirt</button>
+							<AwesomeButton size="medium" type="primary" color="teal" >Enactus T-Shirt</AwesomeButton>
 						</div>
-						
+
 						<div className="column">
 							<div className="columns is-hidden-mobile">
 								<div className="column" />
