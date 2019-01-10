@@ -6,10 +6,6 @@ const getRedirect = req => {
 	const absoluteUrl = `${req.protocol}://${req.hostname}${req.url}`;
 	const relativeUrl = req.url;
 	const relativePath = req.path;
-
-	console.log(absoluteUrl);
-	console.log(relativePath);
-	console.log(relativeUrl);
 	
 	return api.redirects.list().then(({ status, json }) => {
 		const items = json;

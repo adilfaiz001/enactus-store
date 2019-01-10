@@ -98,7 +98,7 @@ export default class HeadMenu extends React.PureComponent {
 			}));
 		}
 		const menuItems = [...categories, ...addItemsToMenu];
-
+		console.log(menuItems);
 		const items = menuItems
 			.filter(category => category.parent_id === null)
 			.map((category, index) => (
