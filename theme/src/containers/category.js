@@ -8,8 +8,7 @@ import Sort from '../components/sort';
 import CategoryBreadcrumbs from '../components/categoryBreadcrumbs';
 import * as helper from '../lib/helper';
 
-import EnactusLightbox from '../components/productDesign/enactusTshirt';
-import TshirtLightbox from '../components/productDesign/tshirt';
+import '../../assets/css/tshirt.css';
 
 const getFilterAttributesSummary = productFilter => {
 	let attributesSummary = '';
@@ -98,6 +97,9 @@ const CategoryContainer = props => {
 
 	let cancelLightBox = false;
 
+	handleSubmit = (e) => {
+
+	}
 	return (
 		<Fragment>
 			<MetaTags
@@ -127,7 +129,7 @@ const CategoryContainer = props => {
 							(pageTitle === 'Clothing') ?
 								(
 									<div className='design-tshirt'>
-										<div>
+										<div className='tshirt-form'>
 											<h1>Enactus T-Shirt</h1>
 											<form onSubmit={() => handleSubmit()}>
 												<label htmlFor='name'>Name</label>
