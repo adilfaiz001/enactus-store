@@ -8,6 +8,8 @@ import Sort from '../components/sort';
 import CategoryBreadcrumbs from '../components/categoryBreadcrumbs';
 import * as helper from '../lib/helper';
 
+import EnactusLightbox from '../components/productDesign/enactusTshirt';
+import TshirtLightbox from '../components/productDesign/tshirt';
 
 const getFilterAttributesSummary = productFilter => {
 	let attributesSummary = '';
@@ -91,6 +93,19 @@ const CategoryContainer = props => {
 
 	const showFilter = themeSettings.show_product_filter;
 
+	let enactusLightBox = false;
+	let tshirtLightBox = false;
+
+	let cancelLightBox = false
+
+	const Enactus_TShirt = () => {
+		enactusLightBox = True;
+		<EnactusLightbox 
+			state={enactusLightBox}
+			cancel={cancelLightBox}
+		/>
+	}
+
 	return (
 		<Fragment>
 			<MetaTags
@@ -109,20 +124,24 @@ const CategoryContainer = props => {
 			<section className="section section-category">
 				<div className="container">
 					<div className="columns">
+
+						{
+							(pageTitle === 'Clothing') ?
+								(
+									<div className='button'>
+										<button id='enactus-tshirt' onClick={() => Enactus_TShirt()}>Enactus T-Shirt</button>
+										<button id='tshirt-design' onClick={() => tshirt_design()}>Design Your T-Shirt</button>
+									</div>
+								):
+								null
+						}
+
 						{showFilter === true && (
 							<div className="column is-one-quarter left-sidebar">
 								<ProductFilter {...props} />
 							</div>
 						)}
-						{
-							(pageTitle === 'Clothing') ?
-							(
-								<div className='button'>
-									<button>Enactus T-Shirt</button>
-								</div>
-							):
-							null
-						}
+						
 						
 
 						<div className="column">
