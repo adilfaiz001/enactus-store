@@ -91,7 +91,6 @@ const CategoryContainer = props => {
 
 	const showFilter = themeSettings.show_product_filter;
 
-	console.log(pageTitle);
 	return (
 		<Fragment>
 			<MetaTags
@@ -115,9 +114,16 @@ const CategoryContainer = props => {
 								<ProductFilter {...props} />
 							</div>
 						)}
-						<div className='button'>
-							<button>Enactus T-Shirt</button>
-						</div>
+						{
+							(pageTitle === 'Clothing') ?
+							(
+								<div className='button'>
+									<button>Enactus T-Shirt</button>
+								</div>
+							):
+							null
+						}
+						
 
 						<div className="column">
 							<div className="columns is-hidden-mobile">
