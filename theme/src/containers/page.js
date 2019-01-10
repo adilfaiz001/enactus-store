@@ -5,6 +5,7 @@ import MetaTags from '../components/metaTags';
 import PageList from '../components/pageList';
 
 const PageContainer = props => {
+	console.log(props);
 	const {
 		state: { pageDetails }
 	} = props;
