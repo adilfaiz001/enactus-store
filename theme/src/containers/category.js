@@ -92,10 +92,15 @@ const CategoryContainer = props => {
 
 	const showFilter = themeSettings.show_product_filter;
 
-	let enactusLightBox = false;
-	let tshirtLightBox = false;
 
-	let cancelLightBox = false;
+
+	var tshirtStyle = {
+		display : 'flex',
+		flexDirection: 'column'
+	};
+
+
+
 
 	handleSubmit = (e) => {
 
@@ -129,7 +134,7 @@ const CategoryContainer = props => {
 							(pageTitle === 'Clothing') ?
 								(
 									<div className='design-tshirt'>
-										<div className='tshirt-form'>
+										<div className='tshirt-form' style={tshirtStyle}>
 											<h1>Enactus T-Shirt</h1>
 											<form onSubmit={() => handleSubmit()}>
 												<label htmlFor='name'>Name</label>
