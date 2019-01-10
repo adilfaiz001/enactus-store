@@ -8,8 +8,6 @@ import Sort from '../components/sort';
 import CategoryBreadcrumbs from '../components/categoryBreadcrumbs';
 import * as helper from '../lib/helper';
 
-import '../../assets/css/tshirt.css';
-
 const getFilterAttributesSummary = productFilter => {
 	let attributesSummary = '';
 	if (productFilter.attributes) {
