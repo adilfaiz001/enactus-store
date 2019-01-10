@@ -14,7 +14,7 @@ const PageContainer = props => {
 	const showPageList = pageListTagDefined && pageDetails.path === pageListPath;
 
 	console.log(pageListPath);
-	
+
 	return (
 		<Fragment>
 			<MetaTags

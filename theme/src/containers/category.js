@@ -113,7 +113,11 @@ const CategoryContainer = props => {
 								<ProductFilter {...props} />
 							</div>
 						)}
-
+						
+						<div className='button'>
+							<button>Enatus T-Shirt</button>
+						</div>
+						
 						<div className="column">
 							<div className="columns is-hidden-mobile">
 								<div className="column" />
