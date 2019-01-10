@@ -96,13 +96,13 @@ const CategoryContainer = props => {
 	let enactusLightBox = false;
 	let tshirtLightBox = false;
 
-	let cancelLightBox = false
+	let cancelLightBox = false;
 
-	const Enactus_TShirt = () => {
-		<EnactusLightbox 
-			state={enactusLightBox}
-			cancel={cancelLightBox}
-		/>
+	const Enactus_TShirt = (state) => {
+		console.log(state);
+		<section>
+			<h1>Get Form Details</h1>
+		</section>
 	}
 
 	return (
@@ -128,7 +128,7 @@ const CategoryContainer = props => {
 							(pageTitle === 'Clothing') ?
 								(
 									<div className='button'>
-										<button id='enactus-tshirt' onClick={() => Enactus_TShirt()}>Enactus T-Shirt</button>
+										<button id='enactus-tshirt' onClick={() => Enactus_TShirt('True')}>Enactus T-Shirt</button>
 										<button id='tshirt-design' onClick={() => tshirt_design()}>Design Your T-Shirt</button>
 									</div>
 								):
