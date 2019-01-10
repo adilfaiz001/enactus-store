@@ -33,6 +33,10 @@ class HeadMenuItem extends React.Component {
 
 	render() {
 		const { categories, category, onClick, level, isMobile } = this.props;
+		
+		console.log(categories);
+		console.log(category);
+
 		const items = categories
 			.filter(item => item.parent_id === category.id)
 			.map((subcategory, index) => (
@@ -98,7 +102,7 @@ export default class HeadMenu extends React.PureComponent {
 			}));
 		}
 		const menuItems = [...categories, ...addItemsToMenu];
-		console.log(menuItems);
+		
 		const items = menuItems
 			.filter(category => category.parent_id === null)
 			.map((category, index) => (
