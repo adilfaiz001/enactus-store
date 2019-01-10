@@ -116,7 +116,7 @@ const CategoryContainer = props => {
 							</div>
 						)}
 						<div className='button'>
-							<AwesomeButton size="medium" type="primary" color="teal" >Enactus T-Shirt</AwesomeButton>
+							<button>Enactus T-Shirt</button>
 						</div>
 
 						<div className="column">
