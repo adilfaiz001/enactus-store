@@ -98,13 +98,6 @@ const CategoryContainer = props => {
 
 	let cancelLightBox = false;
 
-	const Enactus_TShirt = (state) => {
-		console.log(state);
-		<section>
-			<h1>Get Form Details</h1>
-		</section>
-	}
-
 	return (
 		<Fragment>
 			<MetaTags
@@ -124,23 +117,32 @@ const CategoryContainer = props => {
 				<div className="container">
 					<div className="columns">
 
-						{
-							(pageTitle === 'Clothing') ?
-								(
-									<div className='button'>
-										<button id='enactus-tshirt' onClick={() => Enactus_TShirt('True')}>Enactus T-Shirt</button>
-										<button id='tshirt-design' onClick={() => tshirt_design()}>Design Your T-Shirt</button>
-									</div>
-								):
-								null
-						}
-
 						{showFilter === true && (
 							<div className="column is-one-quarter left-sidebar">
 								<ProductFilter {...props} />
 							</div>
 						)}
 						
+						{
+							(pageTitle === 'Clothing') ?
+								(
+									<div className='design-tshirt'>
+										<div>
+											<h1>Enactus T-Shirt</h1>
+											<form onSubmit={() => handleSubmit()}>
+												<label htmlFor='name'>Name</label>
+												<input type='text' id='name' placeholder='Name' />
+												<label htmlFor='department'>Department</label>
+												<input type='text' id='department' placeholder='Department'/>
+												<label htmlFor='size'>Size</label>
+												<input type='text' id='size' placeholder='S,M,L,XL,XXL'/>
+												<button>Conform Order</button>
+											</form>
+										</div>
+									</div>
+								):
+								null
+						}
 						
 
 						<div className="column">
