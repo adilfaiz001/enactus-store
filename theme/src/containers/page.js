@@ -5,7 +5,6 @@ import MetaTags from '../components/metaTags';
 import PageList from '../components/pageList';
 
 const PageContainer = props => {
-	console.log(props);
 	const {
 		state: { pageDetails }
 	} = props;
@@ -14,6 +13,8 @@ const PageContainer = props => {
 	const pageListPath = pageListTagDefined ? `/${pageListTag}` : null;
 	const showPageList = pageListTagDefined && pageDetails.path === pageListPath;
 
+	console.log(pageListPath);
+	
 	return (
 		<Fragment>
 			<MetaTags
