@@ -100,9 +100,10 @@ const CategoryContainer = props => {
 
 
 
-	handleSubmit = (e) => {
+	const handleSubmit = (e) => {
 
 	}
+
 	return (
 		<Fragment>
 			<MetaTags
@@ -134,7 +135,7 @@ const CategoryContainer = props => {
 									<div className='design-tshirt'>
 										<div className='tshirt-form' style={tshirtStyle}>
 											<h1>Enactus T-Shirt</h1>
-											<form onSubmit={() => handleSubmit()}>
+											<form onSubmit={(e) => handleSubmit(e)}>
 												<label htmlFor='name'>Name</label>
 												<input type='text' id='name' placeholder='Name' />
 												<label htmlFor='department'>Department</label>
