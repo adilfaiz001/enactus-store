@@ -33,9 +33,6 @@ class HeadMenuItem extends React.Component {
 
 	render() {
 		const { categories, category, onClick, level, isMobile } = this.props;
-		
-		console.log(categories);
-		console.log(category);
 
 		const items = categories
 			.filter(item => item.parent_id === category.id)
