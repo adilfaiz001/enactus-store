@@ -99,7 +99,6 @@ const CategoryContainer = props => {
 	let cancelLightBox = false
 
 	const Enactus_TShirt = () => {
-		enactusLightBox = True;
 		<EnactusLightbox 
 			state={enactusLightBox}
 			cancel={cancelLightBox}
