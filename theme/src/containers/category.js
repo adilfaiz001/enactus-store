@@ -134,6 +134,7 @@ const CategoryContainer = props => {
 						
 						{(pageTitle === 'Clothing') ?  (
 							<div className='column design-tshirt flex'>
+
 								<div className='tshirt-form flex'>
 									<h1>Enactus T-Shirt</h1>
 									<form onSubmit={(e) => handleSubmit(e)} className='flex'>
@@ -151,6 +152,25 @@ const CategoryContainer = props => {
 										<button>Conform Order</button>
 									</form>
 								</div>
+
+								<div className='tshirt-form flex'>
+									<h1>Team T-Shirt</h1>
+									<form onSubmit={(e) => handleSubmit(e)} className='flex'>
+										<label htmlFor='teamName'></label>
+										<input type='text' id='teamName' placeholder='Team Name' />
+										<label htmlFor='department'></label>
+										<input type='text' id='department' placeholder='Department/Faculty'/>
+										<select id="size" name="size">
+											<option value="sm">Small(S)</option>
+											<option value="m">Medium(M)</option>
+											<option value="l">Large(L)</option>
+											<option value="xl">Extra Large(XL)</option>
+											<option value="xxl">Double Extra Large(XXL)</option>
+										</select>
+										<button>Conform Order</button>
+									</form>
+								</div>
+
 							</div>
 								):
 								null
