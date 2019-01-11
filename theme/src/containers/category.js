@@ -137,7 +137,7 @@ const CategoryContainer = props => {
 							<div className='column design-tshirt flex'>
 
 								<div className='tshirt-form flex'>
-									<h1>Enactus T-Shirt</h1>
+									<h1>Enactus JMI Team T-Shirt</h1>
 									<form onSubmit={(e) => handleSubmit(e)} className='flex'>
 										<label htmlFor='name'></label>
 										<input type='text' id='name' placeholder='Name' />
@@ -155,7 +155,7 @@ const CategoryContainer = props => {
 								</div>
 
 								<div className='tshirt-form flex'>
-									<h1>Team T-Shirt</h1>
+									<h1>Customised JMI Hoodie</h1>
 									<form onSubmit={(e) => handleSubmit(e)} className='flex'>
 										<label htmlFor='teamName'></label>
 										<input type='text' id='teamName' placeholder='Team Name' />
