@@ -90,7 +90,7 @@ const CategoryContainer = props => {
 
 	const showFilter = themeSettings.show_product_filter;
 
-	var state = {
+	var form_state = {
 		name : null,
 		teamName: null,
 		department: null,
@@ -98,22 +98,22 @@ const CategoryContainer = props => {
 	};
 
 	const handleName = (e) => {
-		state.name = e.target.value;
+		form_state.name = e.target.value;
 	}
 	const handleTeamName = (e) => {
-		state.teamName = e.target.value;
+		form_state.teamName = e.target.value;
 	}
 	const handleDepartment = (e) => {
-		state.department = e.target.value;
+		form_state.department = e.target.value;
 	}
 	const handleSize = (e) => {
-		state.size = e.target.value;
+		form_state.size = e.target.value;
 	}
 
 	
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		console.log(state);
+		console.log(form_state);
 	}
 
 
