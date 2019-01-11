@@ -97,7 +97,10 @@ const CategoryContainer = props => {
 		flexDirection: 'column'
 	};
 
-
+	var formStyle = {
+		display: 'flex',
+		flexDirection:'column'
+	};
 
 
 	const handleSubmit = (e) => {
