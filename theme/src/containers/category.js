@@ -104,7 +104,7 @@ const CategoryContainer = props => {
 
 
 	const handleSubmit = (e) => {
-
+		console.log(e.target.value);
 	}
 
 	return (
