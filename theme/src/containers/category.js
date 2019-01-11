@@ -161,7 +161,7 @@ const CategoryContainer = props => {
 											<option value="xl">Extra Large(XL)</option>
 											<option value="xxl">Double Extra Large(XXL)</option>
 										</select>
-										<button>Conform Order</button>
+										<button disabled>Conform Order</button>
 									</form>
 								</div>
 
