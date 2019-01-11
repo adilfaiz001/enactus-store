@@ -107,7 +107,7 @@ const CategoryContainer = props => {
 		form_state.department = e.target.value;
 	}
 	const handleSize = (e) => {
-		form_state.size = e.target.value;
+		form_state.size = e.target.id.value;
 	}
 
 	
