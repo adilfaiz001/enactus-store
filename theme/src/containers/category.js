@@ -133,10 +133,10 @@ const CategoryContainer = props => {
 						)}
 						
 						{(pageTitle === 'Clothing') ?  (
-							<div className='column design-tshirt'>
-								<div className='tshirt-form' style={tshirtStyle}>
+							<div className='column design-tshirt flex'>
+								<div className='tshirt-form flex'>
 									<h1>Enactus T-Shirt</h1>
-									<form onSubmit={(e) => handleSubmit(e)}>
+									<form onSubmit={(e) => handleSubmit(e)} className='flex'>
 										<label htmlFor='name'>Name</label>
 										<input type='text' id='name' placeholder='Name' />
 										<label htmlFor='department'>Department</label>
