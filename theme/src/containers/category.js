@@ -137,12 +137,17 @@ const CategoryContainer = props => {
 								<div className='tshirt-form flex'>
 									<h1>Enactus T-Shirt</h1>
 									<form onSubmit={(e) => handleSubmit(e)} className='flex'>
-										<label htmlFor='name'>Name</label>
+										<label htmlFor='name'></label>
 										<input type='text' id='name' placeholder='Name' />
-										<label htmlFor='department'>Department</label>
+										<label htmlFor='department'></label>
 										<input type='text' id='department' placeholder='Department'/>
-										<label htmlFor='size'>Size</label>
-										<input type='text' id='size' placeholder='S,M,L,XL,XXL'/>
+										<select id="size" name="size">
+											<option value="sm">Small(S)</option>
+											<option value="m">Medium(M)</option>
+											<option value="l">Large(L)</option>
+											<option value="xl">Extra Large(XL)</option>
+											<option value="xxl">Double Extra Large(XXL)</option>
+										</select>
 										<button>Conform Order</button>
 									</form>
 								</div>
