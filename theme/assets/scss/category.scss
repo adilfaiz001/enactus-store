@@ -245,7 +245,7 @@ textarea::placeholder
   font-weight: 300;
 }
 
-button 
+.confirm-order-button 
 {
     background-color: #333;
     color: whitesmoke;
@@ -255,10 +255,6 @@ button
     font-size: 21px;
     font-weight: 600;
     cursor: pointer;
-}
-button:hover
-{
-  background-color: #000;
 }
 .button-disabled{
   background: #cccccc;

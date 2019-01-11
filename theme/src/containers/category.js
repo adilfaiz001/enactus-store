@@ -112,13 +112,18 @@ const CategoryContainer = props => {
 		form_state.size = value;
 	}
 
-	const ValidateOrder = (fstate) => {
-		return true;
+	const ValidateOrder_1 = (fstate) => {
+		if(form_state.name !== null && form_state.department !== null && form_state.size !== null){
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		form_state.OrderValid = ValidateOrder(form_state);
+		form_state.OrderValid = ValidateOrder_1(form_state);
 		if(form_state.OrderValid)
 		{
 			console.log(form_state);
