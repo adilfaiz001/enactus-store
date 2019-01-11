@@ -104,6 +104,7 @@ const CategoryContainer = props => {
 
 
 	const handleSubmit = (e) => {
+		e.preventDefault();
 		console.log(e.target.value);
 	}
 
@@ -127,8 +128,8 @@ const CategoryContainer = props => {
 
 					<div className="columns">
 
-						{pageTitle !== 'Clothing' && showFilter === true && (
-							<div className="column is-one-quarter left-sidebar">
+						{showFilter === true && (
+							<div className="column is-one-quarter left-sidebar is-mobile-hidden">
 								<ProductFilter {...props} />
 							</div>
 						)}
