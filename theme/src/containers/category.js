@@ -90,7 +90,7 @@ const CategoryContainer = props => {
 
 	const showFilter = themeSettings.show_product_filter;
 
-	const state = {
+	var state = {
 		name : null,
 		teamName: null,
 		department: null,
