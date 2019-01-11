@@ -94,7 +94,8 @@ const CategoryContainer = props => {
 		name : null,
 		teamName: null,
 		department: null,
-		size: null
+		size: null,
+		orderValid: false
 	};
 
 	const handleName = (e) => {
@@ -111,10 +112,18 @@ const CategoryContainer = props => {
 		form_state.size = value;
 	}
 
-	
+	const ValidateOrder = (fstate) => {
+		return true;
+	}
+
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		console.log(form_state);
+		form_state.OrderValid = ValidateOrder(form_state);
+		if(form_state.OrderValid)
+		{
+			console.log(form_state);
+		}
+		
 	}
 
 
@@ -161,7 +170,16 @@ const CategoryContainer = props => {
 											<option value="xl">Extra Large(XL)</option>
 											<option value="xxl">Double Extra Large(XXL)</option>
 										</select>
-										<button disabled>Conform Order</button>
+										{
+                            				(form_state.OrderValid) ? (
+                                				<button className="confirm-order-button"
+                                        			onClick={() => handleSubmit()}>CONFIRM ORDER</button>
+                            					) : (
+												<button className="confirm-order-button button-disabled"
+														onClick={() => handleSubmit()}
+														disabled>CONFIRM ORDER</button>
+                            )
+                        }
 									</form>
 								</div>
 

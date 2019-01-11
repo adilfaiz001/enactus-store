@@ -247,6 +247,8 @@ textarea::placeholder
 
 button 
 {
+    background-color: #333;
+    color: whitesmoke;
     margin: 5% 25%;
     height: 2.5em;
     border-radius: 10px;
@@ -256,10 +258,11 @@ button
 }
 button:hover
 {
-  background-color: #333;
-  color: whitesmoke;
+  background-color: #000;
 }
-
+.button-disabled{
+  background: #cccccc;
+}
 /*
 Mobile
 */
@@ -306,4 +309,5 @@ Mobile
     font-weight: 400;
     cursor: pointer;
   }
+  
 }
