@@ -124,9 +124,10 @@ const CategoryContainer = props => {
 
 			<section className="section section-category">
 				<div className="container">
+
 					<div className="columns">
 
-						{showFilter === true && (
+						{pageTitle !== 'Clothing' && showFilter === true && (
 							<div className="column is-one-quarter left-sidebar">
 								<ProductFilter {...props} />
 							</div>
