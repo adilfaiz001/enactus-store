@@ -107,7 +107,8 @@ const CategoryContainer = props => {
 		form_state.department = e.target.value;
 	}
 	const handleSize = (e) => {
-		form_state.size = e.target.id.value;
+		let {size,value} = e.target;
+		form_state.size = value;
 	}
 
 	
@@ -153,7 +154,7 @@ const CategoryContainer = props => {
 										<input type='text' id='name' placeholder='Name' onChange={(e) => handleName(e)} />
 										<label htmlFor='department'></label>
 										<input type='text' id='department' placeholder='Department' onChange={(e) => handleDepartment(e)} />
-										<select id="size" name="size" onChange={(e) => handleSize(e)} >
+										<select id="size" name="size" placeholder='Size' onChange={(e) => handleSize(e)} >
 											<option value="sm">Small(S)</option>
 											<option value="m">Medium(M)</option>
 											<option value="l">Large(L)</option>
