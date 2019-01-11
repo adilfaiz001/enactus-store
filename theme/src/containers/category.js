@@ -90,23 +90,32 @@ const CategoryContainer = props => {
 
 	const showFilter = themeSettings.show_product_filter;
 
-
-
-	var tshirtStyle = {
-		display : 'flex',
-		flexDirection: 'column'
+	const state = {
+		name : null,
+		teamName: null,
+		department: null,
+		size: null
 	};
 
-	var formStyle = {
-		display: 'flex',
-		flexDirection:'column'
-	};
+	const handleName = (e) => {
+		state.name = e.target.value;
+	}
+	const handleTeamName = (e) => {
+		state.teamName = e.target.value;
+	}
+	const handleDepartment = (e) => {
+		state.department = e.target.value;
+	}
+	const handleSize = (e) => {
+		state.size = e.target.value;
+	}
 
-
+	
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		console.log(e.target.value);
+		console.log(state);
 	}
+
 
 	return (
 		<Fragment>
@@ -141,10 +150,10 @@ const CategoryContainer = props => {
 									<h1>Enactus JMI Team T-Shirt</h1>
 									<form onSubmit={(e) => handleSubmit(e)} className='flex'>
 										<label htmlFor='name'></label>
-										<input type='text' id='name' placeholder='Name' />
+										<input type='text' id='name' placeholder='Name' onChange={(e) => handleName(e)} />
 										<label htmlFor='department'></label>
-										<input type='text' id='department' placeholder='Department'/>
-										<select id="size" name="size">
+										<input type='text' id='department' placeholder='Department' onChange={(e) => handleDepartment(e)} />
+										<select id="size" name="size" onChange={(e) => handleSize(e)} >
 											<option value="sm">Small(S)</option>
 											<option value="m">Medium(M)</option>
 											<option value="l">Large(L)</option>
