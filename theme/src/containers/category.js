@@ -164,6 +164,8 @@ const CategoryContainer = props => {
 								<div className='tshirt-form flex'>
 									<h1>Enactus JMI Team T-Shirt</h1>
 									<form onSubmit={(e) => handleSubmit(e)} className='flex'>
+
+										
 										<label htmlFor='name'></label>
 										<input type='text' id='name' placeholder='Name' onChange={(e) => handleName(e)} />
 										<label htmlFor='department'></label>
