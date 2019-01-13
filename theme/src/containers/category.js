@@ -113,6 +113,7 @@ const CategoryContainer = props => {
 	const handleSize = (e) => {
 		let {size,value} = e.target;
 		form_state.size = value;
+		form_state.OrderValid = ValidateOrder_1(form_state);
 	}
 
 	const ValidateOrder_1 = (fstate) => {
@@ -126,7 +127,6 @@ const CategoryContainer = props => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		form_state.OrderValid = ValidateOrder_1(form_state);
 		if(form_state.OrderValid)
 		{
 			console.log(form_state);
@@ -169,17 +169,17 @@ const CategoryContainer = props => {
 									<form onSubmit={(e) => handleSubmit(e)} className='flex'>
 
 										<div className='img-picker'>
-											<input type="radio" name="color" id="color-1" className='img-radio' value='color-1' onClick = {(e) => handleColor(e)} />
+											<input type="radio" name="color-1" id="color-1" className='img-radio' value='color-1' onClick = {(e) => handleColor(e)} />
 											<label htmlFor="color-1" className='img-label'>
 												<img src='../assets/images/hoodie M.jpg' className='img-opt'></img>
 											</label>
 
-											<input type="radio" name="color"  id="color-2" className='img-radio' value='color-2' onClick = {(e) => handleColor(e)} />
+											<input type="radio" name="color-2"  id="color-2" className='img-radio' value='color-2' onClick = {(e) => handleColor(e)} />
 											<label htmlFor="color-2" className='img-label'>
 												<img src='../assets/images/HOODIE1B.jpg' className="img-opt"></img>
 											</label>
 
-											<input type="radio" name="color" id="color-3" className='img-radio' value='color-3' onClick = {(e) => handleColor(e)}/>
+											<input type="radio" name="color-3" id="color-3" className='img-radio' value='color-3' onClick = {(e) => handleColor(e)}/>
 											<label htmlFor="color-3" className='img-label'>
 												<img src='../assets/images/HOODIE1Bl.jpg' className="img-opt"></img>
 											</label>
@@ -198,11 +198,9 @@ const CategoryContainer = props => {
 										</select>
 										{
                             				(form_state.OrderValid) ? (
-                                				<button className="confirm-order-button"
-                                        			onClick={() => handleSubmit()}>CONFIRM ORDER</button>
+                                				<button className="confirm-order-button">CONFIRM ORDER</button>
                             					) : (
 												<button className="confirm-order-button button-disabled"
-														onClick={() => handleSubmit()}
 														disabled>CONFIRM ORDER</button>
                             )
                         }
