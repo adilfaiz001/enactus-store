@@ -275,13 +275,11 @@ textarea::placeholder
 {
   cursor: pointer;
 }
-/*
-.img-opt
+.img-label:checked + .img-label
 {
-  
+  -webkit-filter: saturate(800%); /* Safari 6.0 - 9.0 */
+  filter: saturate(800%);
 }
-*/
-
 /*
 Mobile
 */
