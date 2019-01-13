@@ -99,7 +99,7 @@ const CategoryContainer = props => {
 		orderValid: false
 	};
 	const handleColor = (e) => {
-		form_state = e.target.value;
+		form_state.color = e.target.value;
 	}
 	const handleName = (e) => {
 		form_state.name = e.target.value;
@@ -169,12 +169,12 @@ const CategoryContainer = props => {
 									<form onSubmit={(e) => handleSubmit(e)} className='flex'>
 
 										<div className='img-picker'>
-											<input type="radio" name="color-1" id="color-1" className='img-radio' onClick = {(e) => handleColor(e)} />
+											<input type="radio" name="color-1" id="color-1" className='img-radio' value='color-1' onClick = {(e) => handleColor(e)} />
 											<label htmlFor="color-1" className='img-label'>
 												<img src='../assets/images/hoodie M.jpg' className='img-opt'></img>
 											</label>
 
-											<input type="radio" name="color-2"  id="color-2" className='img-radio' onClick = {(e) => handleColor(e)} />
+											<input type="radio" name="color-2"  id="color-2" className='img-radio'  onClick = {(e) => handleColor(e)} />
 											<label htmlFor="color-2" className='img-label'>
 												<img src='../assets/images/HOODIE1B.jpg' className="img-opt"></img>
 											</label>
