@@ -197,14 +197,8 @@ const CategoryContainer = props => {
 											<option value="xl">Extra Large(XL)</option>
 											<option value="xxl">Double Extra Large(XXL)</option>
 										</select>
-										{
-                            				(form_state.OrderValid) ? (
-                                				<button className="confirm-order-button">CONFIRM ORDER</button>
-                            					) : (
-												<button className="confirm-order-button button-disabled"
-														disabled>CONFIRM ORDER</button>
-                            )
-                        }
+
+										<button className="confirm-order-button">CONFIRM ORDER</button>
 									</form>
 								</div>
 
