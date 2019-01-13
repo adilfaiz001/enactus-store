@@ -165,7 +165,21 @@ const CategoryContainer = props => {
 									<h1>Enactus JMI Team T-Shirt</h1>
 									<form onSubmit={(e) => handleSubmit(e)} className='flex'>
 
-										<img src='../assets/images/hoodie M.jpg'></img>
+										<input type="radio" name="color" id="color-1">
+										<label htmlFor="color-1">
+											<img src='../assets/images/hoodie M.jpg' className='img-opt'></img>
+										</label>
+
+										<input type="radio" name="color"  id="color-2">
+										<label htmlFor="color-2">
+											<img src='../assets/images/HOODIE1B.jpg' className="img-opt"></img>
+										</label>
+
+										<input type="radio" name="color" id="color-3">
+										<label htmlFor="color-3">
+											<img src='../assets/images/HOODIE1B.jpg' className="img-opt"></img>
+										</label>
+										
 										<label htmlFor='name'></label>
 										<input type='text' id='name' placeholder='Name' onChange={(e) => handleName(e)} />
 										<label htmlFor='department'></label>
