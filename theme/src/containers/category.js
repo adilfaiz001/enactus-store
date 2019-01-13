@@ -169,17 +169,17 @@ const CategoryContainer = props => {
 									<form onSubmit={(e) => handleSubmit(e)} className='flex'>
 
 										<div className='img-picker'>
-											<input type="radio" name="color-1" id="color-1" className='img-radio' value='color-1' onClick = {(e) => handleColor(e)} />
+											<input type="radio" name="color-1" id="color-1" className='img-radio' onClick = {(e) => handleColor(e)} />
 											<label htmlFor="color-1" className='img-label'>
 												<img src='../assets/images/hoodie M.jpg' className='img-opt'></img>
 											</label>
 
-											<input type="radio" name="color-2"  id="color-2" className='img-radio' value='color-2' onClick = {(e) => handleColor(e)} />
+											<input type="radio" name="color-2"  id="color-2" className='img-radio' onClick = {(e) => handleColor(e)} />
 											<label htmlFor="color-2" className='img-label'>
 												<img src='../assets/images/HOODIE1B.jpg' className="img-opt"></img>
 											</label>
 
-											<input type="radio" name="color-3" id="color-3" className='img-radio' value='color-3' onClick = {(e) => handleColor(e)}/>
+											<input type="radio" name="color-3" id="color-3" className='img-radio' onClick = {(e) => handleColor(e)}/>
 											<label htmlFor="color-3" className='img-label'>
 												<img src='../assets/images/HOODIE1Bl.jpg' className="img-opt"></img>
 											</label>
@@ -187,8 +187,10 @@ const CategoryContainer = props => {
 
 										<label htmlFor='name'></label>
 										<input type='text' id='name' placeholder='Name' onChange={(e) => handleName(e)} />
+										
 										<label htmlFor='department'></label>
 										<input type='text' id='department' placeholder='Department' onChange={(e) => handleDepartment(e)} />
+										
 										<select id="size" name="size" placeholder='Size' onChange={(e) => handleSize(e)} >
 											<option value="sm">Small(S)</option>
 											<option value="m">Medium(M)</option>
