@@ -91,13 +91,16 @@ const CategoryContainer = props => {
 	const showFilter = themeSettings.show_product_filter;
 
 	var form_state = {
+		color:null,
 		name : null,
 		teamName: null,
 		department: null,
 		size: null,
 		orderValid: false
 	};
-
+	const handleColor = (e) => {
+		form_state = e.target.value;
+	}
 	const handleName = (e) => {
 		form_state.name = e.target.value;
 	}
@@ -166,17 +169,17 @@ const CategoryContainer = props => {
 									<form onSubmit={(e) => handleSubmit(e)} className='flex'>
 
 										<div className='img-picker'>
-											<input type="radio" name="color" id="color-1" className='img-radio' />
+											<input type="radio" name="color" id="color-1" className='img-radio' value='color-1' onClick = {(e) => handleColor(e)} />
 											<label htmlFor="color-1" className='img-label'>
 												<img src='../assets/images/hoodie M.jpg' className='img-opt'></img>
 											</label>
 
-											<input type="radio" name="color"  id="color-2" className='img-radio' />
+											<input type="radio" name="color"  id="color-2" className='img-radio' value='color-2' onClick = {(e) => handleColor(e)} />
 											<label htmlFor="color-2" className='img-label'>
 												<img src='../assets/images/HOODIE1B.jpg' className="img-opt"></img>
 											</label>
 
-											<input type="radio" name="color" id="color-3" className='img-radio'/>
+											<input type="radio" name="color" id="color-3" className='img-radio' value='color-3' onClick = {(e) => handleColor(e)}/>
 											<label htmlFor="color-3" className='img-label'>
 												<img src='../assets/images/HOODIE1Bl.jpg' className="img-opt"></img>
 											</label>
