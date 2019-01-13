@@ -264,7 +264,7 @@ textarea::placeholder
 .img-picker
 {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .img-radio
@@ -275,12 +275,12 @@ textarea::placeholder
 {
   cursor: pointer;
 }
+/*
 .img-opt
 {
-  height: 40px;
-  width:  40px;
+  
 }
-
+*/
 
 /*
 Mobile

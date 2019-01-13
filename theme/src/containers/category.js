@@ -178,7 +178,7 @@ const CategoryContainer = props => {
 
 											<input type="radio" name="color" id="color-3" className='img-radio'/>
 											<label htmlFor="color-3" className='img-label'>
-												<img src='../assets/images/HOODIE1BI.jpg' className="img-opt"></img>
+												<img src='../assets/images/HOODIE1Bl.jpg' className="img-opt"></img>
 											</label>
 										</div>
 
