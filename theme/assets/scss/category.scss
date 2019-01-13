@@ -277,8 +277,8 @@ textarea::placeholder
 }
 .img-radio:checked + .img-label
 {
-  -webkit-filter: saturate(800%); /* Safari 6.0 - 9.0 */
-  filter: saturate(800%);
+  -webkit-filter: opacity(80%); /* Safari 6.0 - 9.0 */
+  filter: opacity(80%);
 }
 /*
 Mobile
