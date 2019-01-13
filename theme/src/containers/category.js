@@ -7,6 +7,7 @@ import ProductFilter from '../components/productFilter';
 import Sort from '../components/sort';
 import CategoryBreadcrumbs from '../components/categoryBreadcrumbs';
 import * as helper from '../lib/helper';
+import $ from 'jquery';
 
 const getFilterAttributesSummary = productFilter => {
 	let attributesSummary = '';
@@ -133,6 +134,11 @@ const CategoryContainer = props => {
 		
 	}
 
+	$('.img-radio').click(function(e){
+		if (e.ctrlKey) {
+			$('.img-radio').prop('checked', false);
+		}
+	});
 
 	return (
 		<Fragment>
@@ -165,7 +171,7 @@ const CategoryContainer = props => {
 
 								<div className='tshirt-form flex'>
 									<h1>Enactus JMI Team T-Shirt</h1>
-									<form onSubmit={(e) => handleSubmit(e)} className='flex'>
+									<form className='flex'>
 
 										<div className='img-picker'>
 											<input type="radio" name="color-1" id="color-1" className='img-radio' value='color-1' onClick = {(e) => handleColor(e)} />
@@ -198,7 +204,7 @@ const CategoryContainer = props => {
 											<option value="xxl">Double Extra Large(XXL)</option>
 										</select>
 
-										<button className="confirm-order-button">CONFIRM ORDER</button>
+										<button className="confirm-order-button" onSubmit={(e) => handleSubmit(e)}>CONFIRM ORDER</button>
 									</form>
 								</div>
 
