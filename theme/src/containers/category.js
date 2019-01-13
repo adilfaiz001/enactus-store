@@ -96,7 +96,7 @@ const CategoryContainer = props => {
 		teamName: null,
 		department: null,
 		size: null,
-		orderValid: false
+		orderValid: true
 	};
 	const handleColor = (e) => {
 		form_state.color = e.target.value;
@@ -113,7 +113,6 @@ const CategoryContainer = props => {
 	const handleSize = (e) => {
 		let {size,value} = e.target;
 		form_state.size = value;
-		form_state.OrderValid = ValidateOrder_1(form_state);
 	}
 
 	const ValidateOrder_1 = (fstate) => {
