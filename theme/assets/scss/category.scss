@@ -259,6 +259,29 @@ textarea::placeholder
 .button-disabled{
   background: #cccccc;
 }
+
+
+.img-picker
+{
+  display: flex;
+  flex-direction: row;
+}
+
+.img-radio
+{
+  display: none;
+}
+.img-label
+{
+  cursor: pointer;
+}
+.img-opt
+{
+  height: 40px;
+  width:  40px;
+}
+
+
 /*
 Mobile
 */
